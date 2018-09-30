@@ -4,8 +4,8 @@
 <script>
 function getOS() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/windows phone/i.test(userAgent)) return "Windows Phone"; 
-    else if (/android/i.test(userAgent)) return "Android";
+    if      (/windows phone/i.test(userAgent))  return "Windows Phone"; 
+    else if (/android/i.test(userAgent))        return "Android";
     else if (/iPad|iPhone|iPod/.test(userAgent) || navigator.appVersion.indexOf("Mac")!=-1 && !window.MSStream) return "iOS";
     else return "unknown";
 };
@@ -16,8 +16,8 @@ function detectServe() {
         ios     = "https://spemer.com/articles.html",
         unknown = "https://spemer.com/portfolio/dream-drim-korea-apartment-application.html";
 
-    if (getOS() == "Android") window.location.href = android;
-    else if (getOS() == "iOS") window.location.href = ios;
+    if      (getOS() == "Android")  window.location.href = android;
+    else if (getOS() == "iOS")      window.location.href = ios;
     else if (getOS() == "Windows Phone") {
         alert("지원하지 않는 스마트폰입니다.");
         window.location.href = unknown;
