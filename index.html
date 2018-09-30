@@ -9,8 +9,7 @@ function getOS() {
     else if (/iPad|iPhone|iPod/.test(userAgent) || navigator.appVersion.indexOf("Mac")!=-1 && !window.MSStream) return "iOS";
     else return "unknown";
 };
-</script>
-<script>
+
 function detectServe() {
     var android = "https://spemer.com",
         ios     = "https://spemer.com/articles.html",
