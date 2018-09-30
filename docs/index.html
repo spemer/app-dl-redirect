@@ -15,13 +15,13 @@ function getMobileOperatingSystem() {
         return "iOS";
     }
     else return "unknown";
-}
+};
 </script>
 <script>
-function DetectAndServe() {
+function detectServe() {
     var android = "https://spemer.com",
         ios     = "https://spemer.com/articles.html",
-        unknown = "https://spemer.com/about-spemer.html";
+        unknown = "https://spemer.com/portfolio/dream-drim-korea-apartment-application.html";
 
     if (getMobileOperatingSystem() == "Android") {
         window.location.href = android;
@@ -40,6 +40,6 @@ function DetectAndServe() {
 };
 </script>
 </head>
-<body onload="DetectAndServe()">
+<body onload="detectServe()">
 </body>
 </html>
