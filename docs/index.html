@@ -35,7 +35,8 @@ function DetectAndServe(){
     }
 
     if (getMobileOperatingSystem() == "unknown" || "Windows Phone") {
-    window.location.href = unknown;
+        alert("지원하지 않는 스마트폰입니다.");
+        window.location.href = unknown;
     }
 };
 </script>
