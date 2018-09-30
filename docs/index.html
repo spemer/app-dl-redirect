@@ -8,16 +8,15 @@ function getMobileOperatingSystem() {
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
     }
-
-    if (/android/i.test(userAgent)) {
+    else if (/android/i.test(userAgent)) {
         return "Android";
     }
-
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
-
-    return "unknown";
+    else {
+        return "unknown";
+    }
 }
 </script>
 <script>
@@ -29,12 +28,10 @@ function DetectAndServe(){
     if (getMobileOperatingSystem() == "Android") {
         window.location.href = android;
     }
-
-    if (getMobileOperatingSystem() == "iOS") {
+    else if (getMobileOperatingSystem() == "iOS") {
         window.location.href = ios;
     }
-
-    if (getMobileOperatingSystem() == "unknown" || "Windows Phone") {
+    else if (getMobileOperatingSystem() == "unknown" || "Windows Phone") {
         alert("지원하지 않는 스마트폰입니다.");
         window.location.href = unknown;
     }
