@@ -3,7 +3,7 @@
 <head>
 <script>
 function getMobileOperatingSystem() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
@@ -20,7 +20,7 @@ function getMobileOperatingSystem() {
 }
 </script>
 <script>
-function DetectAndServe(){
+function DetectAndServe() {
     var android = "https://spemer.com",
         ios     = "https://spemer.com/articles.html",
         unknown = "https://spemer.com/about-spemer.html";
@@ -32,7 +32,7 @@ function DetectAndServe(){
         window.location.href = ios;
     }
     else if (getMobileOperatingSystem() == "unknown" || "Windows Phone") {
-        alert("지원하지 않는 스마트폰입니다.");
+        alert("모바일 환경이 아니거나, 지원하지 않는 스마트폰입니다.");
         window.location.href = unknown;
     }
 };
