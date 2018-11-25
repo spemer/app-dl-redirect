@@ -38,11 +38,11 @@ function detectServe() {
     if      (getOS() == "Android")  window.location.href = android;
     else if (getOS() == "iOS")      window.location.href = ios;
     else if (getOS() == "Windows Phone") {
-        alert("지원하지 않는 스마트폰입니다.");
+        alert("안드로이드, iOS 운영체제에서만 다운로드 가능합니다.");
         window.location.href = unknown;
     }
     else {
-        alert("모바일 환경이 아니거나, 지원하지 않는 스마트폰입니다.");
+        alert("안드로이드, iOS 운영체제에서만 다운로드 가능합니다.");
         window.location.href = unknown;
     }
 };
